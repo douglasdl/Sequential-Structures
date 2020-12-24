@@ -5,3 +5,8 @@
 # comprar apenas latas de 18 litros;
 # comprar apenas galões de 3,6 litros;
 # misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+
+number1 = input("Please, inform a number: ")
+number2 = input("Please, inform a number: ")
+sum = int(number1) + int(number2) # can yu int() or float() methods
+print("{} + {} = {}".format(number1, number2, sum))

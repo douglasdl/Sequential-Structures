@@ -1,4 +1,5 @@
-# Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+# Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. 
+# Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
 # salário bruto.
 # quanto pagou ao INSS.
 # quanto pagou ao sindicato.
@@ -10,3 +11,8 @@
 # - Sindicato ( 5%) : R$
 # = Salário Liquido : R$
 # Obs.: Salário Bruto - Descontos = Salário Líquido.
+
+salary = float(input("Please, inform your hourly income: "))
+hours = float(input("Please, inform the number of hours worked on this month: "))
+totalSalary = salary * hours
+print("This month salary is {}.".format(totalSalary))
