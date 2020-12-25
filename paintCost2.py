@@ -6,7 +6,32 @@
 # comprar apenas galões de 3,6 litros;
 # misturar latas e galões, de forma que o desperdício de tinta seja menor. Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
 
-number1 = input("Please, inform a number: ")
-number2 = input("Please, inform a number: ")
-sum = int(number1) + int(number2) # can yu int() or float() methods
-print("{} + {} = {}".format(number1, number2, sum))
+import math
+
+oneLcoverage = 6
+paintCanVolume = 18
+paintCanPrice = 80.00
+paintCanCoverage = paintCanVolume * oneLcoverage
+paintGallonVolume = 3.6
+paintGallonPrice = 25.00
+paintGallonCoverage = paintGallonVolume * oneLcoverage
+
+area = float(input("Please, inform the paint area (m2): "))
+area = area * 1.1
+
+onlyCans = math.ceil(area / paintCanCoverage)
+onlyGallons = math.ceil(area / paintGallonCoverage)
+bestChoiceCans = math.ceil(area / paintCanCoverage)
+if area % paintCanCoverage == 0:
+    bestChoiceGallons = 0
+else:
+    bestChoiceGallons = (area % paintCanCoverage)
+
+cost1 = onlyCans * paintCanPrice
+cost2 = onlyGallons * paintGallonPrice
+cost3 = onlyCans
+
+print("You can choose one of the following options:")
+print("1. You will need {} cans. An you will spend R${}".format(onlyCans, cost1))
+print("2. You will need {} gallons. An you will spend R${}".format(onlyGallons, cost2))
+print("3. You will need {} cans and {} gallons. An you will spend R${}".format(bestChoiceCans, paintCanCoverage, cost3))
